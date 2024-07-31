@@ -4,6 +4,7 @@ import { ProductModule } from './product/product.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     AppRoutingModule,
     ProductModule
   ],
-  providers: [provideHttpClient(withFetch())],
+  providers: [provideHttpClient(withFetch()), provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

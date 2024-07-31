@@ -13,7 +13,7 @@ products: Product[]=[];
 
   ngOnInit(): void {
     this.prodctService.getProducts().subscribe(data => {
-      //this.products =data;
+      this.products =data;
       console.log(data)
     })
   }
