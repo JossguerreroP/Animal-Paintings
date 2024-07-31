@@ -8,3 +8,5 @@ ng generate module product
 ng generate service product/product
 
 ng generate component product/product-list
+
+ng g class models/product
