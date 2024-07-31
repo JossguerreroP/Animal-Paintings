@@ -1,1 +1,10 @@
+C:\Users\hp\Documents\Angular\NewProject\Animal-Paintings
+
 ng new Animal-Paintings --no-standalone
+
+
+ng generate module product
+
+ng generate service product/product
+
+ng generate component product/product-list
