@@ -1,5 +1,6 @@
-<p>product-list works!</p>
-
+<div class="container">
+    <h5> Our latets Animal paintings !</h5>
+<div class="product-flex">
 <div *ngFor="let product of products">
     <mat-card class="product-card">
         <img mat-card-image src="assets/images/{{product.image_url}}">
@@ -10,4 +11,5 @@
       </mat-card>
       
 </div>
-
+</div>
+</div>
