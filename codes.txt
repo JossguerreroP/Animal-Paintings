@@ -12,3 +12,9 @@ ng generate component product/product-list
 ng g class models/product
 
 ng g environments
+
+ng serve --configuration=development
+
+ng add @angular/material
+
+npm install @angular/cdk

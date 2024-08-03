@@ -3,7 +3,7 @@
 <div class="product-flex">
 <div *ngFor="let product of products">
     <mat-card class="product-card">
-        <img mat-card-image src="assets/images/{{product.image_url}}">
+        <img mat-card-image src="assets/images/{{product.imageUrl}}">
         <mat-card-content>
             <mat-card-title>{{product.name}}</mat-card-title>
             <mat-card-subtitle>{{product.price | currency: 'USD'}}</mat-card-subtitle>
