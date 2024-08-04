@@ -9,11 +9,20 @@ import { Product } from '../models/product';
 })
 export class CartService {
 
-  private apiUrl = environment.apiUrl + "/cart"
+  private apiUrl = environment.apiUrl + "/cart";
 
   constructor(private http: HttpClient) { }
 
   addToCart(product:Product): Observable<Product>{
     return this.http.post<Product>(this.apiUrl,product);
   }
+
+  getCartItems() : Observable<Product[]>{
+    return this.http.get<Product[]>(this.apiUrl);
+  }
+
+  clearCart(): Observable<void> {
+    return this.http.delete<void>(this.apiUrl);
+  }
+
 }
