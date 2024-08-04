@@ -18,3 +18,9 @@ ng serve --configuration=development
 ng add @angular/material
 
 npm install @angular/cdk
+
+ng g module cart
+
+ng g service cart/cart
+
+ng g component cart/cart-view
