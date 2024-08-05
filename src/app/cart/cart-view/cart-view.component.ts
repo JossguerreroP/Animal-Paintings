@@ -9,6 +9,7 @@ import { Product } from '../../models/product';
 export class CartViewComponent implements OnInit {
 
 cartItems: Product[] = [];
+totalPrice: number =0;
 
 constructor(private cartService: CartService){
 
@@ -18,5 +19,17 @@ constructor(private cartService: CartService){
       this.cartItems = data;
     })
   }
+
+  getTotalPrice():number {
+    let total =0;
+    for(let item of this.cartItems){
+      total+=item.price;
+    }
+    return total;
+  }
+
+
+
+
 
 }
