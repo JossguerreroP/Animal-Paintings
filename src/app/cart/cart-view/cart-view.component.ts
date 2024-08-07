@@ -17,6 +17,7 @@ constructor(private cartService: CartService){
   ngOnInit(): void {
     this.cartService.getCartItems().subscribe(data => {
       this.cartItems = data;
+      this.totalPrice = this.getTotalPrice();
     })
   }
 
@@ -29,7 +30,14 @@ constructor(private cartService: CartService){
   }
 
 
+  clearCart(): void {
+    this.cartService.clearCart();
+  }
 
+  checkout():void{
+    this.cartService.checkot(this.cartItems).subscribe(data =>{
 
+    })
+  }
 
 }
