@@ -2,8 +2,8 @@
     <h5> Our latets Animal paintings !</h5>
 <div class="product-flex">
 <div *ngFor="let product of products">
-    <mat-card class="product-card">
-        <img mat-card-image src="assets/images/{{product.imageUrl}}">
+    <mat-card class="product-card" (click)="addToCart(product)">
+        <img mat-card-image src="assets/images/{{product.image_url}}">
         <mat-card-content>
             <mat-card-title>{{product.name}}</mat-card-title>
             <mat-card-subtitle>{{product.price | currency: 'USD'}}</mat-card-subtitle>

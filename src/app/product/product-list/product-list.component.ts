@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Product } from '../../models/product';
-
+import { CartService } from '../../cart/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -17,7 +17,15 @@ products: Product[]=[];
       console.log(data)
     })
   }
-  constructor(private prodctService: ProductService){
+
+  addToCart(product: Product):void{
+    this.cartService.addToCart(product).subscribe();
+  }
+
+
+
+  constructor(private prodctService: ProductService , 
+              private cartService: CartService){
 
   }
 
