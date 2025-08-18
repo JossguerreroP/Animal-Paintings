@@ -23,6 +23,7 @@ sortOrder: string = "";
   }
 
   addToCart(product: Product):void{
+    console.log(product)
     this.cartService.addToCart(product).subscribe({
       next: () => { 
         this.snackbar.open("Product added to cart!","",{
