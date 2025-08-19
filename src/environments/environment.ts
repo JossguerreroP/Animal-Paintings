@@ -1,3 +1,4 @@
 export const environment = {
-     apiUrl:''
+    production: true,
+    apiUrl:'https://spring.applicationsdeployed.com/products'
 };
