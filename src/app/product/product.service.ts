@@ -7,7 +7,8 @@ import { Product } from '../models/product';
   providedIn: 'root'
 })
 export class ProductService {
-private apiUrl = environment.apiUrl+"/products"
+//private apiUrl = environment.apiUrl+"/products"
+private apiUrl = 'https://ok.applicationsdeployed.com/products'
   constructor(private http:HttpClient) { }
 
   getProducts():Observable<Product[]>{
